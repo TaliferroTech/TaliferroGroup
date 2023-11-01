@@ -1,0 +1,131 @@
+<a href="/blog/nov-2022/application-architecture#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'Application Architecture'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/application-architecture.webp" alt="Application Architecture">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Nov 27, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> Application architecture is a key deliverable of a project. This post provides architects, application designers, and developers with the following: </p>
+                            <ul>
+                                <li> Summary of the application inventory, in particular, how the application relates to the business vision. How it reacts to other applications and the sum of their
+                                    qualitative and quantitative characteristics. </li>
+                                <li> An overview of how specific architectural issues are handled </li>
+                                <li> Guidelines for selecting a specific technical approach where alternatives exist </li>
+                            </ul>
+                            <p> For this post to remain relevant, ongoing work must occur to ensure that as new architecture capabilities are developed, this post is updated with the other
+                                architectures initiated to cover gaps known to exist in this post. </p>
+                            <h2 class="text-capitalize"> Architecture Principles </h2>
+                            <p>
+                                <strong>Time-based snapshot</strong> - A requirement to display asset state at particular points in time.
+                            </p>
+                            <p>
+                                <strong>The right level of granularity</strong> - Ensure the right level is considered for data, services, and user display consumption.
+                            </p>
+                            <p>
+                                <strong>Don't break subscribers</strong> - Any subscribers to a web service exposed should not break the subscriber's code.
+                            </p>
+                            <p>
+                                <strong>Horizontal data growth</strong> -Based on plans to import data from various systems, ensure there is a path for flat data growth.
+                            </p>
+                            <p>
+                                <strong>Decouple</strong> - Decouple the view from the middleware, and the middleware from the data. Avoid tight coupling wherever possible.
+                            </p>
+                            <p>
+                                <strong> State rebuild</strong> - The system's current state should be able to be rebuilt at any point.
+                            </p>
+                            <p>
+                                <strong>Data consistency across services</strong> - Data accessed through web services must be consistent regardless of the consumer.
+                            </p>
+                            <p>
+                                <strong>Serve only data needed by the Client</strong> - Avoid retrieving or gathering data the client did not request. Totals, lists, and other queries should not
+                                exceed the initial request by the client.
+                            </p>
+                            <p>
+                                <strong>Prepare and ensure data is available</strong> - Set up triggers to prepare data before the information is needed; for example, when a user logs in, retrieve and
+                                persist in advance only the data required by the user <strong>IF</strong> the data is not currently persisted.
+                            </p>
+                            <p>
+                                <strong>Use the Materialized View Pattern </strong> - The materialized view pattern is used to prepopulate views of data to avoid unnecessary query operations. A
+                                materialized view can significantly improve performance.
+                            </p>
+                            <p>
+                                <strong>Use the Circuit Breaker Pattern</strong> - In some cases, the services a user needs may not be available, or the data may not be available. Resource threads
+                                might be consumed by the caller while waiting for the other service to respond. This could lead to resource exhaustion, which would make the calling service unable to
+                                handle other requests. The failure of one service can potentially cascade to other services. The client should invoke a remote service via a proxy similar to an
+                                electrical circuit breaker. When the number of consecutive failures crosses a threshold, the circuit breaker trips and all attempts to invoke the remote service will
+                                fail immediately. After the timeout expires, the circuit breaker allows a limited number of test requests to pass through. If those requests succeed the circuit breaker
+                                resumes normal operation. If there is still a failure, the timeout period begins again.
+                            </p>
+                            <p>
+                                <strong>API Gateway</strong> - Allows clients to access individual services at a micro level. The granularity of the API should be fine-grained to allow clients to
+                                interact with multiple services as, typically, the services that are provided are different than the client's needs.
+                            </p>
+                            <h2 class="text-capitalize"> Physical Architecture </h2>
+                            <p> A project's technical architecture comprises multiple environments. These environments include integration, staging, and production, where separate resource groups
+                                isolate each domain. </p>
+                            <p> The staging group is not an active environment but is designed to mirror the production environment and assume its activities for real-world testing. Azure provides
+                                redundancy and failover capabilities through the use of a configuration setup. Details on configuration and setup will be defined during an Operations Architecture and
+                                Deployment Planning phase. </p>
+                            <p> In addition, the external systems used for development and System tests do not belong to a project but are active environments within a company operated by various
+                                stakeholders. </p>
+                            <p> Through a set of web services, the architecture should empower developers to assemble new business applications that combine the functionality from multiple systems
+                                within a company, providing the end-user with new cross-functional <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a>-enabled applications. The architecture should meet the challenges of: </p>
+                            <ul>
+                                <li> Availability </li>
+                                <li> Data Management </li>
+                                <li> Management and Monitoring </li>
+                                <li> Performance and Scalability </li>
+                                <li> Resiliency </li>
+                                <li> Security </li>
+                            </ul>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/oct-2022/e-commerce-scalability-strategy" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/nov-2022/best-practices-for-network-systems" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

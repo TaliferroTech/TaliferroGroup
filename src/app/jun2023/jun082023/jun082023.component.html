@@ -1,0 +1,98 @@
+<a href="/blog/jun-2023/harnessing-the-power-of-shared-core-mdules-in-angular#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'Harnessing the Power of Shared Core Modules in Angular'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/harnessing-the-power-of-shared-core-mdules-in-angular.webp"
+                                    alt="Harnessing the Power of Shared Core Modules in Angular">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>June 8, 2023</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2 class="text-capitalize"> Introduction - Singleton Services for Optimal Application Performance </h2>
+                            <p> In the domain of Angular development, efficiency, and modularity assume paramount significance. As applications become complex, managing dependencies and ensuring
+                                optimal performance becomes imperative. A potent tool in an Angular developer's arsenal is the concept of a shared core module. By leveraging a core module equipped
+                                with providers for singleton services, developers can amplify code reusability, streamline dependency injection, and optimize the initialization process for services
+                                that demand loading at application startup. In this discourse, I will explore the advantages and best practices of utilizing a shared core module in Angular. </p>
+                            <h2 class="text-capitalize"> core module </h2>
+                            <p> The core module is a centralized repository for crucial functionalities and services that find applications throughout the software. Unlike feature modules encompassing
+                                components and directives, the core module solely devotes itself to furnishing services and other utility functions. By segregating core functionalities from
+                                feature-specific components, developers can attain a heightened level of modularity, maintainability, and code organization. </p>
+                            <p> One of the cardinal benefits of employing a shared core module lies in the capability to define and furnish singleton services. Singleton services are instantiated
+                                merely once and shared across the entire application. This approach confers several advantages. Firstly, it guarantees the existence of only one instance of a service
+                                throughout the application, obviating redundant initialization and conserving resources. Secondly, singleton services enable seamless data and state sharing between
+                                diverse components, facilitating efficient communication and curtailing the necessity for excessive event handling or callback mechanisms. </p>
+                            <p> To implement a shared core module featuring singleton services, developers ought to focus on two pivotal aspects: module definition and provider configuration. The core
+                                module should be generated utilizing the Angular CLI command </p>
+                            <p>
+                                <code>
+        ng generate module core --flat --module=app
+    </code>
+                            </p>
+                            <p> with app representing the root module of the application. By designating the --flat option, we ensure that the core module is generated in the project's root directory,
+                                eschewing the need for a separate folder. This choice aids in upholding a lucid project structure and grants effortless access to the core module. </p>
+                            <p> Subsequently, after crafting the core module, the ensuing step involves defining and configuring the singleton services within the module. Services can be generated
+                                through the command ng generate service core/my-service, where my-service embodies the service's name. Inside the core module file, the services should be enlisted as
+                                providers utilizing the @NgModule decorator's providers property. This configuration guarantees that the services are instantiated as singletons and remain accessible
+                                for injection across the application. </p>
+                            <p> It is vital to note that the core module should not encompass any declarations. It is a pure services module devoid of components, directives, or pipes. This design
+                                decision fosters a distinct demarcation of responsibilities and forestalls conflicts or duplication with feature modules that might declare analogous entities. </p>
+                            <p> To ensure the shared core module is duly imported and employed within the application, it should be imported in the root module (app.module.ts) utilizing the imports
+                                property of the @NgModule decorator. This step establishes the module hierarchy and facilitates the availability of the core module and its services throughout the
+                                application. </p>
+                            <p> Developers can attain augmented code reusability and maintainability by harnessing a shared core module with singleton services. As the application scales in magnitude,
+                                the core module can be seamlessly extended to accommodate novel services or functionalities without impinging upon the existing codebase. Additionally, the segregation
+                                of responsibilities between the feature and core modules fosters a modular architecture that nurtures team collaboration and scalability. </p>
+                            <h2 class="text-capitalize"> Conclusion </h2>
+                            <p> Utilizing a shared core module in Angular, with a focus on singleton services, offers many advantages for application development. By adopting this approach, developers
+                                can enhance code reusability, foster modularity, and ensure efficient resource utilization. The core module is a centralized repository for essential functionalities,
+                                enabling seamless communication and data sharing between components. Furthermore, the clear separation between the core and feature modules promotes a scalable and
+                                maintainable codebase. Embracing the power of a shared core module with singleton services empowers Angular developers to optimize application performance, streamline
+                                dependency injection, and propel their projects toward success. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/jun-2023/unveiling-the-consequences-of-poor-data-design" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/jun-2023/streamlining-small-business-operations-with-technology" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

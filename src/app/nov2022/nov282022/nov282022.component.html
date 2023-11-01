@@ -1,0 +1,130 @@
+<a href="/blog/nov-2022/azure-in-reflection#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'Azure in Reflection'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/azure-in-reflection.webp" alt="Azure in Reflection">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Nov 28, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> The longer I am away from Azure, the harder it is for me to remember all the components I used to work with. Thus I am creating this post as a cheat sheet. A brain dump
+                                that can be useful to future me and any architects who want a quick understandting of some of the Azure products. </p>
+                            <h2 class="text-capitalize"> Products </h2>
+                            <p>
+                                <strong>Virtual Network</strong> - in the Azure environment, a virtual <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a> is established as the platform for data, middleware execution, and resource retrieval.
+                                All the resources will communicate outbound to the internet and inbound with Azure components.
+                            </p>
+                            <p>
+                                <strong>Data Private Subnet</strong> - A dedicated data subnet within the virtual <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a>. The advantage of breaking the data and app environment up into a subnet is
+                                that the subnet allows the division of one <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a> into logical subnetworks, separating data duties from middleware and web resource duties.
+                            </p>
+                            <p>
+                                <strong>App Environment Subnet</strong> - This subnet is responsible for all business logic, web service, and resource access.
+                            </p>
+                            <p>
+                                <strong>Azure Active Directory</strong> - The Azure Active Directory component serves as an identity management service and can filter access to applications by
+                                enforcing security rules. In addition, the AD services allow a project to leverage Single Sign On (SSO).
+                            </p>
+                            <p>
+                                <strong>Azure Network Security Groups (NSG)</strong> - An NSG is used to filter <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a> traffic to and from Azure resources in a virtual <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a>.
+                            </p>
+                            <p>
+                                <strong>Azure Data Factory</strong> - The Data Factory can issue custom commands to extract data from external sources through the VM. The Azure Data Factory allows a
+                                project to create extract-transform-load (ETL) commands that populate a proposed Unified Data Platform (UDP).
+                            </p>
+                            <p>
+                                <strong>Azure Data Lake</strong> - The Azure Data Lake works in conjunction with the storage blob for data that is structured, imported through a batch process, and
+                                used for streaming analytics and machine learning. The Data Lake is designed to scale across SQL services. If there will be machine learning aspects to a project, the
+                                structured data can live here.
+                            </p>
+                            <p>
+                                <strong>Azure Data Store</strong> - Used as a repository for data analytics workflow for unstructured, semi-structured, or structured data. It automatically replicates
+                                for unexpected hardware failures and has unlimited size and no limits to scale.
+                            </p>
+                            <p>
+                                <strong>Azure Backup Vault</strong> - is a cloud-to-cloud implementation where cloud-based VMs and data can be backed up to the Backup Vault without disrupting
+                                services.
+                            </p>
+                            <p>
+                                <strong> Virtual Machine (VM)</strong> - The virtual machine will act as the gateway for the Azure Data Factory to extract data from external data stores such as
+                                ServiceNow, Rally, and so on.
+                            </p>
+                            <p>
+                                <strong>Azure Data Bricks</strong> - This can provide the service necessary to harness all the data collected and apply data science to the acquired data.
+                            </p>
+                            <p>
+                                <strong>Azure Storage Blob</strong> - If there will be extraction from many systems, the data can grow exponentially, and if the data is possibly unstructured, or the
+                                information is in a binary format. A blob is used to store the data and for analysis by other Azure services.
+                            </p>
+                            <p>
+                                <strong>Azure Machine Learning Workspaces</strong> - Data scientists use the machine learning workspace to conduct experiments on the data.
+                            </p>
+                            <p>
+                                <strong>Azure SQL database</strong> - The SQL database is used to create custom data tables and enforce referential integrity, in addition to running necessary stored
+                                procedures to generate the data the UI needs.
+                            </p>
+                            <p>
+                                <strong>Cosmos DB </strong> - Cosmos DB can house transformed SQL tables into NoSQL for easy access to middleware. The NoSQL can be a prepackaged summary and lists for
+                                easy retrieval, thus decoupling transformation from middleware.
+                            </p>
+                            <p>
+                                <strong>Slots</strong> - are used as a way to version deployed code. The active slot will permanently house the most current copy code, while deprecated code is pushed
+                                down a slot.
+                            </p>
+                            <p>
+                                <strong>WebApp</strong> - The only difference between the web app and API App is that the WebApp does not contain a defined interface. The web app is the nodejs portion
+                                of a project.
+                            </p>
+                            <p>
+                                <strong>API App</strong> - The API houses the middleware (with interfaces) that contains the business logic that returns the data. Handles all CRUD requests, with the
+                                direction to allow the full-range of operations.
+                            </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/oct-2022/e-commerce-scalability-strategy" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/nov-2022/best-practices-for-network-systems" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

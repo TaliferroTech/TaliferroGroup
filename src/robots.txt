@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /assets/files/rss.xml
+Disallow: /assets/files/livechat.html
+Disallow: /assets/files/TaliferroGroup.pdf
+Disallow: /assets/files/Archive.zip
+
+
+Sitemap: https://taliferro.com/assets/files/sitemap.xml
+
+

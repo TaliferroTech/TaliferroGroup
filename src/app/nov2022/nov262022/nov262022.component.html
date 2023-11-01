@@ -1,0 +1,255 @@
+<a href="/blog/nov-2022/software-design-guide#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'Software Design Guide'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/software-design-guide.webp" alt="Software Design Guide">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Nov 26, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> The following is an attempt to put together a complete yet reasonably flexible set of guidelines for a software design specification. Wherever possible, I have provided
+                                guidelines (instead of prescribing requirements) for the contents of various sections and subsections. Some may prefer to require more detailed subsections of a
+                                particular area, choosing one or more of the subsection topics from the list of guidelines provided. This post is a template for a template. I have reviewed information
+                                from many sources: </p>
+                            <ul>
+                                <li> Software Engineering (Pressman, Sommerville, and Van Vliet), Object-Oriented Development (Booch, Rumbaugh, Berard, Wirfs-Brock) </li>
+                                <li> DoD-Std </li>
+                                <li> various SEI reports </li>
+                                <li> Mil-Std documentation requirements (2167/2167A) </li>
+                                <li> IEEE-830 for software requirements </li>
+                                <li> IEEE documentation standards (particularly IEEE-1016 for software designs </li>
+                            </ul>
+                            <p> I tried avoiding assuming or imposing a particular software development methodology or paradigm and emphasizing content more than format. My desire would be that a
+                                completed software design specification meet the following criteria: </p>
+                            <ul>
+                                <li> The guide should help in conveying enough information and understanding about a project implementation. It should be able to serve as training material for new
+                                    project members adequately. The reader can understand what is being said in design meetings and will feel free when they are first asked to create or modify source
+                                    code. </li>
+                                <li> It should serve as "objective evidence" that the designers and implementers are following through on their commitment to implement the functionality described in
+                                    the requirements specification. </li>
+                                <li> It needs to be as detailed as possible while at the same time not imposing too much of a burden on the designers and implementers that it becomes overly difficult
+                                    to create or maintain. </li>
+                            </ul>
+                            <blockquote> Please note that there are no sections in this post describing administrative or business duties or proposing plans or schedules for testing or development.
+                                The areas in this post are concerned solely with the design of the software. While there are places in this post where it is appropriate to discuss the effects of such
+                                plans on the software design, most of the details concerning such procedures belong in one or more separate documents. </blockquote>
+                            <h2 class="text-capitalize"> System Overview </h2>
+                            <p style="color:blue; font-style:italic"> Provide a general description of the software system, including its functionality and matters related to the overall strategy and
+                                its design (perhaps including a discussion of the basic design approach or organization). Feel free to split this up into subsections (and subsubsections, etc ...).
+                            </p>
+                            <h2 class="text-capitalize"> Design Considerations </h2>
+                            <p style="color:blue; font-style:italic"> Describe any issues that need to be addressed or resolved before attempting to devise a complete design solution. </p>
+                            <h2 class="text-capitalize"> Assumptions and Dependencies </h2>
+                            <p style="color:blue; font-style:italic"> Describe any assumptions or dependencies regarding the software and its use. These may concern such issues as: </p>
+                            <ul style="color:blue; font-style:italic">
+                                <li> Related software or hardware </li>
+                                <li> Operating systems </li>
+                                <li> End-user characteristics </li>
+                                <li> Possible and probable changes in functionality </li>
+                            </ul>
+                            <h2 class="text-capitalize"> General Constraints </h2>
+                            <p style="color:blue; font-style:italic"> Describe any global limitations or constraints that significantly impact the design of the system's software (and describe the
+                                associated implications). Such conditions may be imposed by any of the following (the list is not exhaustive): </p>
+                            <ul style="color:blue; font-style:italic">
+                                <li> Hardware or software environment </li>
+                                <li> End-user environment </li>
+                                <li> Availability or volatility of resources </li>
+                                <li> Standards compliance </li>
+                                <li> Interoperability requirements </li>
+                                <li> Interface/protocol requirements </li>
+                                <li> Data repository and distribution requirements </li>
+                                <li> Security requirements (or other such regulations) </li>
+                                <li> Memory and other capacity limitations </li>
+                                <li> Performance requirements </li>
+                                <li> Network communications </li>
+                                <li> Verification and validation requirements (testing) </li>
+                                <li> Other means of addressing quality goals </li>
+                                <li> Other requirements described in the requirements specification </li>
+                            </ul>
+                            <h2 class="text-capitalize"> Goals </h2>
+                            <p style="color:blue; font-style:italic"> Describe any goals, guidelines, principles, or priorities which dominate or embody the design of the system's software. Such goals
+                                might be: </p>
+                            <ul style="color:blue; font-style:italic">
+                                <li> The KISS principle ("Keep it simple stupid!") </li>
+                                <li> Emphasis on speed versus memory use </li>
+                                <li> working, looking, or "feeling" like an existing product </li>
+                            </ul>
+                            <p style="color:blue; font-style:italic"> For each such goal or guideline, unless it is implicitly obvious, describe the reason for its desirability. Feel free to state and
+                                explain each plan in its subsubsection if you wish. </p>
+                            <h2 class="text-capitalize"> Development Methods </h2>
+                            <p style="color:blue; font-style:italic"> Briefly describe the method or approach used for the software design. Provide a brief explanation of why all or part of it was
+                                used or not used. If several methods were seriously considered, each such practice should be mentioned. If one or more formal/published methods were adopted or adapted,
+                                include a reference to a more detailed description of these methods. </p>
+                            <h2 class="text-capitalize"> Architectural Strategies </h2>
+                            <p style="color:blue; font-style:italic"> Describe any design decisions and strategies that affect the overall organization of the system and its higher-level structures.
+                                These strategies should provide insight into the fundamental abstractions and mechanisms used in the system architecture. Describe the reasoning employed for each
+                                decision and procedure (possibly referring to previously stated design goals and principles) and how any design goals or priorities were balanced or traded off. Such
+                                choices might concern (but are not limited to) things like the following: </p>
+                            <ul style="color:blue; font-style:italic">
+                                <li> Use a particular product type (programming language, database, library, etc. ...) </li>
+                                <li> Reuse of existing software components to implement various parts/features of the system </li>
+                                <li> plans for extending or enhancing the software </li>
+                                <li> User interface paradigms (or system input and output models) </li>
+                                <li> Hardware and software interface paradigms </li>
+                                <li> Error detection and recovery </li>
+                                <li> Memory management policies </li>
+                                <li> External databases and <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=b0cf50c24dc4b6f4888b124d2bd6f018&camp=1789&creative=9325&node=1292110011">data storage</a> management and persistence </li>
+                                <li> Distributed data or control over a <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a> </li>
+                                <li> Generalized approaches to control </li>
+                                <li> Concurrency and synchronization </li>
+                                <li> Communication mechanisms </li>
+                                <li> Management of other resources </li>
+                            </ul>
+                            <p style="color:blue; font-style:italic"> Each effective strategy employed should be discussed in its subsection or (if it is complex enough) in a separate design document
+                                (with an appropriate reference here). When describing a design decision, make sure that you also discuss any other significant alternatives that were considered and
+                                your reasons for rejecting them (as well as your reasons for accepting the choice you finally chose). Sometimes it may be most effective to employ the "pattern format"
+                                for describing a strategy. </p>
+                            <h2 class="text-capitalize"> System Architecture </h2>
+                            <p style="color:blue; font-style:italic"> This section should provide a high-level overview of how the functionality and responsibilities of the system were partitioned and
+                                then assigned to subsystems or components. Please don't go into too much detail about the individual members themselves (there is a subsequent section for detailed
+                                component descriptions). The primary purpose here is to understand how and why the system was decomposed, and how the individual parts work together to provide the
+                                desired functionality. </p>
+                            <p style="color:blue; font-style:italic"> At the top-most level, describe the software's major responsibilities and the various roles that the system (or portions of the
+                                system) must play. Please explain how the system was broken down into components/subsystems (identifying each top-level component/subsystem and the
+                                roles/responsibilities assigned to it). Describe how the higher-level components collaborate to achieve the required results. Remember to provide some rationale for
+                                choosing this system decomposition (perhaps discussing other proposed decays and why they were rejected). Feel free to use design patterns, either in describing parts
+                                of the architecture (in pattern format) or referring to elements of the architecture that employ them. </p>
+                            <p style="color:blue; font-style:italic"> Suppose there are diagrams, models, flowcharts, documented scenarios, or use cases of the system behavior and structure. In that
+                                case, they may be included here (unless you feel they are complex enough to merit being placed in the Detailed System Design section). Diagrams that describe a
+                                particular component or subsystem should be included within the specific subsection that describes that component or subsystem. </p>
+                            <blockquote> Note: This section (and its subsections) applies only to the system's newly developed (or yet-to-be-developed) portions. Suppose parts of the system already
+                                existed before this development effort began. In that case, you only need to describe the pre-existing features that the new parts of the system depend upon and only in
+                                enough detail to describe the relationships and interactions between the old and new parts. Pre-existing parts that are modified or enhanced need to be related only to
+                                the extent necessary for the reader to understand the nature of the changes that were made. </blockquote>
+                            <h2 class="text-capitalize"> Subsystem Architecture </h2>
+                            <p style="color:blue; font-style:italic"> If a particular component merits a more detailed discussion than what was presented in the System Architecture section, provide
+                                that more detailed discussion in a subsection of the System Architecture section (or it may even be more appropriate to describe the component in its design document).
+                                If necessary, describe how the component was further divided into subcomponents and the relationships and interactions between the subcomponents (similar to what was
+                                done for top-level components in the System Architecture section). </p>
+                            <p style="color:blue; font-style:italic"> If any subcomponents are also deemed to further merit discussion, then describe them in a separate subsection of this section (and
+                                in a similar fashion). Proceed to go into as many levels/subsections of discussion as needed for the reader to gain a high-level understanding of the entire system or
+                                subsystem (but remember to leave the gory details for the Detailed System Design section). </p>
+                            <P style="color:blue; font-style:italic"> Suppose this component is substantial and complex. In that case, consider documenting its design in a separate document and simply
+                                including a reference to it in this section. If this is the option you choose, the design document for this component should have an organizational format that is very
+                                similar (if not identical to) this post. </P>
+                            <h2 class="text-capitalize"> Policies and Tactics </h2>
+                            <p style="color:blue; font-style:italic"> Describe design policies and tactics that do not have sweeping architectural implications. This means the guidelines would not
+                                significantly affect the overall organization of the system and its high-level structures), but affect the interface details and implementation of various aspects of
+                                the system. Such decisions might concern (but are not limited to) things like the following: </p>
+                            <ul style="color:blue; font-style:italic">
+                                <li> Choice of which specific product to use (compiler, interpreter, database, library, etc. ...) </li>
+                                <li> Engineering trade-offs </li>
+                                <li> Coding guidelines and conventions </li>
+                                <li> The protocol of one or more subsystems, modules, or subroutines </li>
+                                <li> The choice of a particular algorithm or programming idiom (or design pattern) to implement portions of the system's functionality </li>
+                                <li> Plans for ensuring requirements traceability </li>
+                                <li> Plans for testing the software </li>
+                                <li> Plans for maintaining the software </li>
+                                <li> Interfaces for end-users, software, hardware, and communications </li>
+                                <li> Hierarchical organization of the source code into its physical components (files and directories). </li>
+                                <li> How to build and generate the system's deliverables (how to compile, link, load, etc. ...) </li>
+                            </ul>
+                            <p style="color:blue; font-style:italic"> Each particular policy or set of tactics employed should probably be discussed in its own subsection or (if it is large or complex
+                                enough) in a separate design document (with an appropriate reference here, of course). When describing a design decision, make sure that you also discuss any other
+                                significant alternatives that were considered and your reasons for rejecting them (as well as your reasons for accepting the choice you finally chose). For this reason,
+                                it may be convenient to use one of the more popular "pattern formats" to describe a given tactic. </p>
+                            <p style="color:blue; font-style:italic"> For this particular section, it may become difficult to decide whether a particular policy or set of tactics should be discussed
+                                in this section, in the System Architecture section, or the Detailed System Design section for the appropriate component. You will have to use your "best" judgment to
+                                decide this. There will usually be some global policies and tactics that should be discussed here. Still, decisions about interfaces, algorithms, and/or data structures
+                                might be more appropriately discussed in the same (sub)section as its corresponding software component in one of these other sections. </p>
+                            <h2 class="text-capitalize"> Detailed System Design </h2>
+                            <p style="color:blue; font-style:italic"> Most components described in the System Architecture section require a more detailed discussion. Other lower-level components and
+                                subcomponents may need to be described as well. Each subsection of this section will refer to or contain a detailed description of a system software component. The
+                                discussion provided should cover the following software component attributes: </p>
+                            <h2 class="text-capitalize"> Classification </h2>
+                            <p style="color:blue; font-style:italic"> The kind of component, such as a subsystem, module, class, package, function, file, etc. </p>
+                            <h2 class="text-capitalize"> Definition </h2>
+                            <p style="color:blue; font-style:italic"> The specific purpose and semantic meaning of the component. This should refer back to the requirements specification. </p>
+                            <h2 class="text-capitalize"> Responsibilities </h2>
+                            <p style="color:blue; font-style:italic"> The primary responsibilities and behavior of this component. What does this component accomplish? What roles does it play? What
+                                kinds of services does it provide to its clients? For some features, this may need to refer back to the requirements specification. </p>
+                            <h2 class="text-capitalize"> Constraints </h2>
+                            <p style="color:blue; font-style:italic"> Any relevant assumptions, limitations, or constraints for this component. This should include restrictions on timing, storage, or
+                                component state and might consist of rules for interacting with this component (encompassing preconditions, postconditions, invariants, other constraints on input or
+                                output values and local or global values, data formats and data access, synchronization, exceptions, etc.) </p>
+                            <h2 class="text-capitalize"> Composition </h2>
+                            <p style="color:blue; font-style:italic"> A description of the use and meaning of the subcomponents that are a part of this component. </p>
+                            <h2 class="text-capitalize"> Uses/Interactions </h2>
+                            <p style="color:blue; font-style:italic"> A description of these components' collaborations with other features. What other components is this entity used? What further
+                                details does this entity use (including any side-effects this entity might have on different parts of the system)? This concerns the method of interaction as well as
+                                the exchange itself. Object-oriented designs should describe any known or anticipated subclasses, superclasses, and metaclasses. </p>
+                            <h2 class="text-capitalize"> Resources </h2>
+                            <p style="color:blue; font-style:italic"> A description of any managed, affected, or needed resources by this entity. This should include discussing possible race
+                                conditions and deadlock situations and how they might be resolved. Resources such as memory, processors, printers, databases, or a software library are external to the
+                                design. </p>
+                            <h2 class="text-capitalize"> Processing </h2>
+                            <p style="color:blue; font-style:italic"> A description of precisely how this component performs the duties necessary to fulfill its responsibilities. This should encompass
+                                a description of any algorithms used; changes of state; appropriate time or space complexity; concurrency; methods of creation, initialization, and cleanup; and
+                                handling of exceptional conditions. </p>
+                            <h2 class="text-capitalize"> Interface/Exports </h2>
+                            <p style="color:blue; font-style:italic"> The set of services (resources, data, types, constants, subroutines, and exceptions) that are provided by this component. The
+                                precise definition or declaration of each such element should be present, along with comments or annotations describing the meanings of values, parameters, etc. ....
+                                For each service element described, include (or provide a reference) in its discussion a description of its important software component attributes (Classification,
+                                Definition, Responsibilities, Constraints, Composition, Uses, Resources, Processing, and Interface). </p>
+                            <p style="color:blue; font-style:italic"> Much of the information in this section is not necessarily expected to be kept separate from the source code. Much of the
+                                information can be gleaned from the source (especially if it is adequately commented). This section should not copy or reproduce information that can be easily obtained
+                                from reading the source code (this would be an unwanted and unnecessary duplication of effort and would be very difficult to keep up-to-date). It is recommended that
+                                most of this information be contained in the source (with appropriate comments for each component, subsystem, module, and subroutine). Hence, it is expected that this
+                                section will primarily consist of references to or excerpts of annotated diagrams and source code. Any referenced charts or source code excerpts should be provided in
+                                any design reviews. </p>
+                            <h2 class="text-capitalize"> Detailed Subsystem Design </h2>
+                            <p style="color:blue; font-style:italic"> Provide a detailed description of this software component (or a reference to such a description). Complex diagrams showing the
+                                details of component structure, behavior, or information/control flow may be included in the subsection devoted to that particular component (although, unless they are
+                                very large or complex, some of these diagrams might be more appropriately included in the System Architecture section. The description should cover any applicable
+                                software component attributes (some of which may be adequately described solely by a source code declaration or excerpt). </p>
+                            <h2 class="text-capitalize"> Glossary </h2>
+                            <p style="color:blue; font-style:italic"> An ordered list of defined terms and concepts used throughout the document. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/oct-2022/e-commerce-scalability-strategy" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/nov-2022/best-practices-for-network-systems" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

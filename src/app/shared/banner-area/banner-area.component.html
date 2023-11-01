@@ -1,0 +1,9 @@
+<div style="position: absolute; right: 15px; top: 5px; z-index: 400;"> &nbsp; <a *ngIf="volume" title="Turn Sound Off" style="cursor: pointer; color: darkorange" (click)="toggleMute()"> <i
+            class="fa fa-volume-off" aria-hidden="true"></i></a>
+    <a *ngIf="!volume" title="Turn Sound On" style="cursor: pointer; color: darkorange" (click)="toggleMute()"> <i class="fa fa-volume-up" aria-hidden="true"></i></a>
+</div>
+<video id="background-video" [controls]="'controls'" playsinline autoplay [muted]="'muted'" loop poster="{{posterSource}}">
+    <source src="{{videoSource}}" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<section id="top-section" class="banner banner-style-5" id="op-home">
+</section>

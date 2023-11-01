@@ -1,0 +1,33 @@
+<section class="section section-padding-equal pt-0 related-blog-area mt-2">
+    <div class="container">
+        <div class="section-heading heading-left">
+            <h3 class="title">You Might Also Like</h3>
+        </div>
+        <div class="row recent-post-slide">
+            <div class="col wow fadeInUp">
+                <div class="blog-list">
+                    <div class="post-thumbnail">
+                        <a routerLink="{{article1.location}}"><img style="max-width:124px" src="{{article1.image}}"  alt="{{article1.title}}"></a>
+                    </div>
+                    <div class="post-content">
+                        <h5 class="title"><a routerLink="{{article1.location}}">{{article1.title}}</a></h5>
+                        <p>{{article1.description}}</p>
+                        <a routerLink="{{article1.location}}" class="more-btn">Read more<i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col slick-slide wow fadeInUp">
+                <div class="blog-list">
+                    <div class="post-thumbnail">
+                        <a routerLink="{{article2.location}}"><img style="max-width:124px" src="{{article2.image}}"  alt="{{article2.title}}"></a>
+                    </div>
+                    <div class="post-content">
+                        <h5 class="title"><a routerLink="{{article2.location}}">{{article2.title}}</a></h5>
+                        <p>{{article2.description}}</p>
+                        <a routerLink="{{article2.location}}" class="more-btn">Read more<i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

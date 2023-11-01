@@ -1,0 +1,135 @@
+<section class="section section-padding bg-color-white">
+    <div class="container">
+        <div class="section-heading mb-0">
+            <span class="subtitle">Taliferro Group</span>
+            <h2 class="title">IT Connect</h2>
+            <p> Your On-Demand IT Consultancy Subscription Service</p>
+            <h3 class="title">Your First Step: Complimentary IT Assessment</h3>
+            <p>Start with a FREE initial IT assessment. </p>
+            <p>
+                Our experts will evaluate your current IT environment and provide valuable insights that can help you right away.
+            </p>
+            <h3 class="title">Why Upgrade to Taliferro IT Connect?</h3>
+            <p>After your free assessment, gain uninterrupted access to industry-leading IT solutions tailored for your needs. We're committed to delivering a positive ROI—ask us about our strategies for uncovering hidden revenue. Here's what our subscription covers:</p>
+            <h3>What's Inside the Subscription?</h3>
+            <p>
+                🛡️ <strong>Cybersecurity Health Checks</strong>: Beyond routine scans and reports, our expertise provides peace of mind that your infrastructure is secure. Trust us to safeguard your digital assets while optimizing your operations for tangible ROI.
+            </p>
+            <p>
+                📈 <strong>Monthly Performance Analytics</strong>: Customized reports analyzing your operations, revealing opportunities and efficiencies.
+            </p>
+            <p>
+                🤝 <strong>Consulting Hours</strong>:  Scheduled time with our experts in <strong>Agile Project Management, Cloud Architecture</strong>, and more, available exclusively to subscribers.
+            </p>
+            <p>
+                🛠️ <strong>Tech Quick Fixes</strong>: Access to 'quick fix' solutions for <strong>common IT issues</strong>, reducing downtime and improving operational continuity.
+            </p>
+        </div>
+        <div class="pricing-billing-duration"  id="buy-now">
+            <ul>
+                <li class="nav-item">
+                    <button class="nav-link" (click)="toggle()" [ngClass]="{'active': yearly}" id="yearly-plan-btn" type="button">Billed yearly</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" (click)="toggle()" [ngClass]="{'active': !yearly}" id="monthly-plan-btn" type="button">
+                        Billed monthly</button>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-lg-3  wow fadeInUp">
+                <div class="pricing-table pricing-borderd">
+                    <div class="pricing-header">
+                        <h3 class="title">Tech Check</h3>
+                        <span class="subtitle">Start here</span>
+                        <div class="price-wrap">
+                            <div class="monthly-pricing">
+                                <span class="amount">FREE</span>
+                                <span class="duration">We demystify emerging technologies and guide you on the best solutions for your organization.</span>
+                            </div>
+                        </div>
+                        <div class="pricing-btn">
+                            <a href="mailto:info@taliferro.com?subject=Tech Check&body=Dear Taliferro Group," class="axil-btn btn-large btn-borderd">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <h6>What You Get</h6>
+                        <p>Tech consultation for SMBs and startups focused on long-term, transformative tech integration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3  wow fadeInUp">
+                <div class="pricing-table pricing-borderd">
+                    <div class="pricing-header">
+                        <h3 class="title">Starter</h3>
+                        <span class="subtitle">For Startups/SMBs</span>
+                        <div class="price-wrap">
+                            <div class="monthly-pricing">
+                                <span class="amount" *ngIf="!yearly">$95</span>
+                                <span class="amount" *ngIf="yearly">$950</span>
+                                <span class="duration">Ideal for budget-conscious startups needing periodic expert advice and basic cybersecurity oversight.</span>
+                            </div>
+                        </div>
+                        <div class="pricing-btn">
+                            <a *ngIf="!yearly" href="https://buy.stripe.com/6oE1828Sy6SBeSQ5kk" class="axil-btn btn-large btn-borderd">Get Started</a>
+                            <a *ngIf="yearly" href="https://buy.stripe.com/14kbMG0m2el3h0Y5km" class="axil-btn btn-large btn-borderd">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <h6>What You Get</h6>
+                        <p class="wow fadeInUp">1 Consulting Hour per month, Basic Analytics Report, One Cybersecurity Health Check per Quarter. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3  wow fadeInUp">
+                <div class="pricing-table pricing-borderd">
+                    <div class="pricing-header">
+                        <h3 class="title">Professional</h3>
+                        <span class="subtitle">Medium-sized</span>
+                        <div class="price-wrap">
+                            <div class="monthly-pricing">
+                                <span class="amount" *ngIf="!yearly">$395</span>
+                                <span class="amount" *ngIf="yearly">$3,950</span>
+                                <span class="duration">Ideal for mid-sized firms needing hands-on IT support, analytics, and regular security checks.</span>
+                            </div>
+                        </div>
+                        <div class="pricing-btn">
+                            <a *ngIf="!yearly" href="https://buy.stripe.com/aEU4kefgW5Ox6mk6or" class="axil-btn btn-large btn-borderd">Get Started</a>
+                            <a *ngIf="yearly" href="https://buy.stripe.com/3cs6sm5Gmb8R4ecbIM" class="axil-btn btn-large btn-borderd">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <h6> What You Get </h6>
+                        <p class="wow fadeInUp"> 5 Consulting Hours per month, Advanced Analytics, Monthly Cybersecurity Health Checks. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeInUp">
+                <div class="pricing-table pricing-borderd">
+                    <div class="pricing-header">
+                        <h3 class="title">Enterprise</h3>
+                        <span class="subtitle">Large Enterprises</span>
+                        <div class="price-wrap">
+                            <div class="monthly-pricing">
+                                <span class="amount" *ngIf="!yearly">$995</span>
+                                <span class="amount" *ngIf="yearly">$9,950</span>
+                                <span class="duration">For large organizations requiring comprehensive IT management, real-time analytics and security.</span>
+                            </div>
+                        </div>
+                        <div class="pricing-btn">
+                            <a *ngIf="!yearly" href="https://buy.stripe.com/3csdUO7Oub8R8useUZ" class="axil-btn btn-large btn-borderd">Get Started</a>
+                            <a *ngIf="yearly" href="https://buy.stripe.com/aEU182c4Ka4NaCAeV0" class="axil-btn btn-large btn-borderd">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <h6>What You Get</h6>
+                        <p class="wow fadeInUp"> 10 Consulting Hours, Real-time Analytics Dashboard, Weekly Cybersecurity Health Checks. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="shape-group-3 list-unstyled">
+        <li class="shape shape-2"><img src="assets/media/others/bubble-4.png" alt="shape"></li>
+    </ul>
+</section>

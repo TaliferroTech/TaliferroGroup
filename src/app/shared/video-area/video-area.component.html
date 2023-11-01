@@ -1,0 +1,74 @@
+<section>
+    <!-- <div class="container-fluid">
+        <div class="row"> -->
+    <div class="video-block">
+        <div class="embed-responsive embed-responsive-16by9">
+            <!-- Elevator Pitch -->
+            <iframe *ngIf="videoNumber === 0" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/ucqVNk260YQ?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Value Prop -->
+            <iframe *ngIf="videoNumber === 1" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/JyR8dFLrtUc?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe *ngIf="videoNumber === 2" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/sMjuPCmjjG0?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Dynamic Learning -->
+            <iframe *ngIf="videoNumber === 3" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/4bH3BtryF3o?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Sustainability -->
+            <iframe *ngIf="videoNumber === 4" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/YW7_lkTPGpQ?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Social Media -->
+            <iframe *ngIf="videoNumber === 5" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/uXAKmvl2tpI?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- From Pixels to Perfection -->
+            <iframe *ngIf="videoNumber === 6" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/ZSr3wkpvb64?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Cloud Architecture -->
+            <iframe *ngIf="videoNumber === 7" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/oyfi21E7yVs?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Data Design -->
+            <iframe *ngIf="videoNumber === 8" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/-AuSUID-wNg?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Design -->
+            <iframe *ngIf="videoNumber === 9" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/aNItWUp_oFw?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Digial Marketing -->
+            <iframe *ngIf="videoNumber === 10" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/GN51O5XjSWk?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Bespoke Development -->
+            <iframe *ngIf="videoNumber === 11" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/Xqa-8eXeX34?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Operational Efficiency -->
+            <iframe *ngIf="videoNumber === 12" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/7DW31ayeVkI?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- About Us -->
+            <iframe *ngIf="videoNumber === 13" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/h2_4t5JIPMc?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe *ngIf="videoNumber === 14" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/undRzptEjxc?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- How we Work -->
+                <iframe *ngIf="videoNumber === 15" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/bVFeT2vilx0?rel=0&autoplay=1&mute=1&loop=1"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Home page  -->
+            <iframe *ngIf="videoNumber === 16" title="{{title}}" is="x-frame-bypass" class="embed-responsive-item" src="https://www.youtube.com/embed/Z7yFPyCBcnw?rel=0&autoplay=1&mute=1&loop=1"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- </div>
+            </div> -->
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading heading-left">
+                    <h2 class="title">{{title}}</h2>
+                    <p>{{description1}}</p>
+                    <p>{{description2}}</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- <ul class="shape-group-1 list-unstyled">
+        <li class="shape shape-1"><img src="assets/media/others/bubble-1.png" alt="Taliferro Group"></li>
+        <li class="shape shape-2"><img src="assets/media/others/line-1.png" alt="Taliferro Group"></li>
+        <li class="shape shape-3"><img src="assets/media/others/line-2.png" alt="Taliferro Group"></li>
+        <li class="shape shape-4"><img src="assets/media/others/bubble-2.png" alt="Taliferro Group"></li>
+    </ul> -->
+</section>

@@ -1,0 +1,117 @@
+<a href="/blog/dec-2022/multiple-system-of-record-databases#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'Multiple System of Record Databases'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/multiple-system-of-record-databases.webp" alt="Multiple System of Record Databases">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Dec 5, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> As a data architect, I've seen many companies with multiple SOR. Although it is beneficial for scaling the apps, it has serious side effects. In this post, I will
+                                discuss why having multiple SORs is terrible and some things you can do to mitigate them (if not eliminate them). </p>
+                            <h2 class="text-capitalize"> What is a "System of Record"? </h2>
+                            <p> The term "System of Record" (SoR) refers to one database that stores the most important data for an organization. The SoR is used to store data that cannot be changed
+                                and is then used by other applications as their source of truth for the data. SoRs are typically used for: </p>
+                            <ul>
+                                <li> Internal reporting and auditing </li>
+                                <li> Financial reporting purposes </li>
+                                <li> Salesforce and CRM integrations </li>
+                            </ul>
+                            <h2 class="text-capitalize"> Why having multiple SORs is terrible? </h2>
+                            <p> More than likely, you have a single SOR database. Your team members are likely using the same software to enter data into the same database from different computers or
+                                locations. If your organization spans multiple regions, countries, or even continents, chances are good that the data in your SOR could be more consistent from region
+                                to area. </p>
+                            <p> This is because when an employee enters data into one region's system, for example, Kenya, it will be different from another area, such as Dubai, due to regional
+                                cultural differences and local languages spoken by employees of each location. Suppose both systems are connected through a <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=478548468582b9fce471d3481015a0bc&camp=1789&creative=9325&node=172504">network</a> connection. In that case, they could
+                                be more inconsistencies due to human error while entering information. Employees may need help understanding how to enter the correct information but also comply with
+                                company regulations around these processes like approvals and audits, etcetera. </p>
+                            <h2 class="text-capitalize"> Data Consistency </h2>
+                            <p> Data consistency is one of the essential things to businesses. It's also one of the most challenging things to achieve in a multiple SOR situation. Data consistency
+                                requires that data be consistent across all the different systems that are used to store and use it, but when you have numerous SORs, this type of consistency takes
+                                time to come by. </p>
+                            <p> There are two main ways in which data can be replicated: master-slave replication and peer-to-peer replication. Both methods require synchronizing data between each
+                                system, which can lead to errors if not done correctly. Peer-to-peer replication has an added complication because it requires coordinating time stamps so that they're
+                                all accurate relative to each other. </p>
+                            <h2 class="text-capitalize"> Data Integrity </h2>
+                            <p> Data integrity is maintaining the validity and consistency of data in multiple databases. Data integrity can be defined as the ability of a database to maintain its
+                                structural and logical consistency over time without corruption. This includes ensuring that records are valid (e.g., they have not been deleted) and consistent (e.g.,
+                                all fields have good values). A system that does not provide data integrity will have incomplete, inaccurate, inconsistent, and incorrect data that can cause problems.
+                            </p>
+                            <p> Data integrity is achieved by using ACID transactions on each record in your database - atomicity, consistency, isolation, and durability on every update or delete
+                                request against each record in your database. </p>
+                            <h2 class="text-capitalize"> Approvals and Audits </h2>
+                            <p> The first thing to consider is the audit process. Audits are crucial to ensuring compliance with laws and regulations, but they can only be performed on a single
+                                database. If you have multiple databases, each of them will need separate audits. This means that you'll need more certified staff members to perform audits and
+                                additional time and money spent on these processes. </p>
+                            <p> If an audit does not yield satisfactory results (that is, there were errors), then you will need to go back through the entire process again for each database. This
+                                could take months or even years, depending on how long it takes for each audit report to be completed by your internal team members or external auditors/consultants.
+                            </p>
+                            <h2 class="text-capitalize"> Alternatives </h2>
+                            <p> If you are considering using multiple SORs: </p>
+                            <ul>
+                                <li> Consider using a Mono-repo/Graph database. This will allow you to have a single source of truth, making it easier and faster for your business to access data. It
+                                    will also save your organization time and money by eliminating the need for synchronization efforts, which can take up valuable resources like time and money
+                                    throughout development cycles. </li>
+                                <li> A Mono-repo/Graph database provides greater security than multiple SORs because there is only one place where all the data is stored; if one system goes down, all
+                                    of them go down at once! </li>
+                            </ul>
+                            <p> Maintaining SOR databases could be better. Consider moving them to a single Mono-repo/Graph database if you have any. </p>
+                            <p> Maintaining multiple SORs databases is bad I can't reiterate enough. Consider moving them to a single Mono-repo/Graph database if you have any. This is because: </p>
+                            <ul>
+                                <li> they're hard to maintain </li>
+                                <li> they're expensive (due to licensing and maintenance costs) </li>
+                                <li> they aren't scalable (you can only get so big before the performance starts to suffer) </li>
+                                <li> they aren't secure (people can access data that isn't theirs) </li>
+                                <li> and many other reasons </li>
+                            </ul>
+                            <h2 class="text-capitalize"> Conclusion </h2>
+                            <p> In conclusion, having multiple SOR databases is terrible and should be avoided. If you have any SORs, consider moving them to a single Mono-repo/Graph database. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/dec-2022/turning-it-expense-projects-into-revenue-generating-products" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/dec-2022/using-facebook-to-build-your-audience" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

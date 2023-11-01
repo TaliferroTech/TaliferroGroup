@@ -1,0 +1,89 @@
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'machine learning experiments'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/machine-learning-experiments.webp" alt="machine learning experiments">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Dec 22, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> Experiments are the primary unit of work in Azure Machine Learning Studio. They allow you to track different versions of your machine-learning models and determine
+                                which is best for your business needs. Experiments are isolated and designed to test specific parameters or models. Experiments save time and energy, reduce risk and
+                                give data-driven insights for better decision-making. </p>
+                            <h2 class="text-capitalize"> What is a machine learning experiment </h2>
+                            <p> In Azure Machine Learning, an experiment is the primary unit of work. An experiment is designed to track different versions of your machine-learning model and provide a
+                                way to perform validation tests on each version independently. </p>
+                            <p> Experiments are isolated from each other so that they can run in parallel. This isolation prevents one experiment from affecting another—for example, if one experiment
+                                is running a long-running process like training a model or generating predictions on new data, it should not affect how quickly another experiment runs its processes.
+                            </p>
+                            <h2 class="text-capitalize"> Experiments using the SDK </h2>
+                            <p> Experiments are a way to test different versions of your machine-learning models on the same data set. </p>
+                            <p> Experiments can be run in parallel, so they're great for maximizing the speed of your iterative development process. Experiments allow you to test different parameters
+                                and configurations in one place rather than creating separate training jobs for each model configuration. This enables you to quickly evaluate how various model
+                                configurations perform on real-world data sets without having to write code or deploy new models whenever you want to try something different with your ML workloads.
+                            </p>
+                            <p> As with all experiments, you must run this test with a large enough sample size to be confident in the outcome. </p>
+                            <p> If you've done any data science work before, you might recognize this as a "train-test split." You'll want to set aside some portion of your dataset for testing
+                                purposes; that way, we're not just using our intuition when deciding whether or not one model is better than another. </p>
+                            <p> Experiments are isolated and designed to test specific parameters or models. This is an important distinction because it means that the results of one experiment won't
+                                affect another by making assumptions that aren't true. </p>
+                            <p> Experiments should be designed to be repeatable and easily reproduced so that they can be run in parallel with other experiments on different computers. </p>
+                            <p> Experiments are usually designed to run in a single machine (or cluster) rather than distributed across multiple devices, but this is only sometimes the case. Some
+                                experiments may require local access to input data or output files from previous experiments. In these cases, you'll need to design your experiment's dependencies
+                                carefully so that you don't waste resources running unnecessary steps every time someone runs your code. </p>
+                            <p> You can use experiment results to determine the best machine learning model. The process of doing so is called model selection, or finding the best fit for a specific
+                                problem and dataset. </p>
+                            <p> Experiments save time and energy by allowing us to do more with fewer resources while reducing risk by isolating our code from production environments. Data scientists
+                                can use experiments to automate their workflows, giving them more time for data exploration and creative thinking, leading to better decision-making about ML
+                                strategies. </p>
+                            <h2 class="text-capitalize"> Experiments in Azure Machine Learning Studio </h2>
+                            <p> Experiments are the primary unit of work in Azure Machine Learning Studio. They use a versioned code repository and can be run locally, on your hardware, or in the
+                                cloud. Experiments are isolated and designed to test specific parameters or models, enabling you to determine the best machine-learning model quickly. </p>
+                            <h2> Conclusion </h2>
+                            <p> Experiments are a crucial part of machine learning models. They can help you refine your models by providing data-driven insights into what works best for your
+                                particular dataset and use case. I encourage you to try Experimentation in Azure Machine Learning Studio, where it's easy to create and manage experiments with one
+                                click. These are some of the basics of experiments in Azure Machine Learning Studio. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/dec-2022/great-ideas" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/dec-2022/six-things-you-might-not-know-about-software-architecture" aria-label="Next"> Next <i class="fa fa-chevron-right"
+                                            aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

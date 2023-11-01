@@ -1,0 +1,104 @@
+<a href="/blog/apr-2023/the-misapplication-of-rest-api-dissecting-the-discrepancy-between-api-and-rest#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'The Misapplication of REST API - Dissecting the Discrepancy between API and REST'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/the-misapplication-of-rest-api-dissecting-the-discrepancy-between-api-and-rest.webp"
+                                    alt="The Misapplication of REST API - Dissecting the Discrepancy between API and REST">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Apr 13, 2023</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> In the contemporary digital communication landscape, the term "REST API" has become virtually ubiquitous, permeating the lexicon of developers and technologists alike.
+                                However, this seemingly innocuous phrase harbors a fundamental incongruity that belies the original intent of its progenitor, Roy Fielding. In this post, I shall
+                                delve into the reasons for my aversion to the term "REST API," examine the conceptual distinctions between API and REST and elucidate the implications of this misnomer
+                                within web-based communication. </p>
+                            <h2 class="text-capitalize"> The Genesis of REST </h2>
+                            <p> To comprehend the dissonance engendered by the term "REST API," it is essential to revisit the genesis of REST, an architectural style conceived by Roy Fielding in his
+                                seminal dissertation. The term REST, an acronym for Representational State Transfer, encapsulates a set of principles and constraints that collectively furnish a
+                                framework for designing scalable, efficient, and resilient web-based communication systems. </p>
+                            <p> The core tenets of REST include stateless communication, client-server separation, cacheability, a layered system architecture, and a uniform interface. Stateless
+                                communication mandates that each request from a client to a <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=3a64388bbe76b2957e6be89844c315e6&camp=1789&creative=9325&node=11036071">server</a> must contain all the requisite information to comprehend and process the request, thereby precluding
+                                the need for the <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=3a64388bbe76b2957e6be89844c315e6&camp=1789&creative=9325&node=11036071">server</a> to maintain client context between requests. Client-<a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=3a64388bbe76b2957e6be89844c315e6&camp=1789&creative=9325&node=11036071">server</a> separation entails decoupling user interface concerns from <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=b0cf50c24dc4b6f4888b124d2bd6f018&camp=1789&creative=9325&node=1292110011">data storage</a> and
+                                processing, engendering modularity and flexibility. Cacheability necessitates the inclusion of explicit cache directives, optimizing the performance and responsiveness
+                                of the system. The layered system architecture enables the segmentation of functionality, fostering abstraction and extensibility. Finally, the uniform interface,
+                                predicated on standardized conventions and semantics, facilitates seamless interoperability and consistency across diverse systems. </p>
+                            <h2 class="text-capitalize"> The Nature of APIs </h2>
+                            <p> Conversely, API, or Application Programming Interface, denotes a set of rules, protocols, and tools that enable disparate software applications to communicate. APIs
+                                furnish a structured medium through which developers can access an application or service's functionalities, bypassing the underlying implementation's intricacies. By
+                                adhering to the conventions and specifications delineated by an API, developers can leverage preexisting capabilities, promote code reuse, and foster a modular,
+                                extensible system architecture. </p>
+                            <h2 class="text-capitalize"> The Discrepancy between API and REST </h2>
+                            <p> The crux of my aversion to the term "REST API" lies in the disjunction between the essence of REST as an architectural style and the implementation of APIs in practice.
+                                While REST furnishes a set of principles and constraints that engender scalable, efficient, and resilient communication systems, APIs often diverge from these tenets,
+                                adopting alternative paradigms or exhibiting partial adherence to the RESTful constraints. </p>
+                            <p> For instance, numerous so-called "REST APIs" exhibit a proclivity for deviating from the principle of stateless communication, opting instead for session-based or
+                                stateful interactions that undermine the scalability and resilience of the system. Similarly, many APIs neglect to adhere to the uniform interface constraint, employing
+                                ad hoc conventions or semantics that engender inconsistencies and impede seamless interoperability. </p>
+                            <p> Furthermore, the conflation of REST with HTTP, a standard protocol for implementing RESTful systems, has led to the misconception that all HTTP-based APIs are
+                                inherently RESTful, thereby perpetuating the misapplication of the term "REST API." The term "REST API" has thus become somewhat of a misnomer, frequently employed to
+                                denote APIs that only partially adhere to Fielding's original vision. This misapprehension has engendered a degree of conceptual dissonance within web-based
+                                communication, undermining the efficacy of REST as an architectural style and fostering confusion among developers and technologists. </p>
+                            <h2 class="text-capitalize"> Implications </h2>
+                            <p> The pervasive misapplication of the term "REST API" bears several implications for the broader landscape of web-based communication. Firstly, the conflation of REST
+                                with APIs that deviate from its core principles may dilute the efficacy of Fielding's architectural style, obscuring its original intent and engender confusion among
+                                developers. Consequently, the development of scalable, efficient, and resilient communication systems may be hindered by this conceptual dissonance. </p>
+                            <p> Secondly, the prevalence of the term "REST API" may inadvertently perpetuate the misconception that REST is synonymous with HTTP, undermining the recognition of
+                                alternative protocols or architectural styles that may prove equally, if not more, effective in specific contexts. This myopic focus on REST may impede innovation and
+                                experimentation within web-based communication, stifling the evolution of novel, optimized solutions. </p>
+                            <h2> Conclusion </h2>
+                            <p> My aversion to the term "REST API" stems from the fundamental discrepancy between the essence of REST as an architectural style and the implementation of APIs in
+                                practice. This incongruity engenders a degree of conceptual dissonance that undermines the efficacy of REST and fosters confusion among developers and technologists. To
+                                rectify this misapprehension, it is incumbent upon the technology community to recognize and acknowledge the distinctions between API and REST and strive for a more
+                                nuanced understanding of web-based communication paradigms. By doing so, we can foster a more informed, innovative, and collaborative landscape that aligns with
+                                Fielding's original vision for REST. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/apr-2023/integration-techniques-and-lessons-learned" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                        Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/apr-2023/can-ai-be-your-technology-advisor-harnessing-the-power-of-artificial-intelligence-for-personalized-tech-guidance"
+                                        aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

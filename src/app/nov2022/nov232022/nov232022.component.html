@@ -1,0 +1,104 @@
+<a href="/blog/nov-2022/api-design-best-practices#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<!-- Preloader Start Here -->
+<div id="preloader"></div>
+<!-- Preloader End Here -->
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area-light></app-header-area-light>
+    <app-bread-crumb-light [title]="'API Design Best Practices'"></app-bread-crumb-light>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-blog">
+                        <div class="single-blog-content">
+                            <div class="post-thumbnail">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/api-design-best-practices.webp" alt="API Design Best Practices">
+                            </div>
+                            <div class="author">
+                                <div class="author-thumb">
+                                    <img class="img-thumbnail wow fadeInUp" src="assets/media/blog/author-1.webp" alt="Tyrone Showers">
+                                </div>
+                                <div class="info">
+                                    <h6 class="author-name">Tyrone Showers</h6>
+                                    <ul class="blog-meta list-unstyled">
+                                        <li>Nov 23, 2022</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2> Introduction </h2>
+                            <p> If you're not an API developer, this might seem like a boring subject to read about. But it's essential. An API is how other people interact with your product or
+                                service, so it must be well-designed and easy to use. In this post, I'll look at some best practices for writing APIs, and they can apply to any language or framework.
+                            </p>
+                            <h2 class="text-capitalize"> easy-to-read </h2>
+                            <p> As APIs have grown, JSON is the most common data format used to exchange data between clients and servers. This is because it's simple and readable by humans, making
+                                debugging problems with an API easy. In addition, since JSON is a subset of JavaScript, many web applications can quickly parse this format without making additional
+                                code changes (almost all modern browsers support JavaScript). </p>
+                            <h2 class="text-capitalize"> Keep it consistent </h2>
+                            <p> Consistency in your code is essential for usability, maintainability, and readability. But it's also a crucial aspect of security. </p>
+                            <p> For instance, if you use the same variable name for something different in two different places (e.g., "user_id" as a string vs. an integer), depending on how you use
+                                it (e.g., printing out the value or passing it to another function) you'll end up with an error that might be hard to find because there are many places where the
+                                variable is referenced. This adds extra time and effort for debugging, complicating things when something goes wrong in user-facing software like websites or mobile
+                                apps. </p>
+                            <p> On top of this issue, if your application relies on external services (e.g., social media accounts), any inconsistencies between those services could cause problems if
+                                not handled properly and lead to inaccurate data being stored within a system. </p>
+                            <h2 class="text-capitalize"> Return the correct status codes </h2>
+                            <p> When returning a response, be sure to use the correct status code. This helps your API clients understand what happened and what they should do next. </p>
+                            <p> You should return a 200 OK when your request is successful but it may take some time to complete. For example, when sending an email through SendGrid, you'll receive a
+                                200 OK if the recipient has been added successfully, but it could take up to five minutes for that message to arrive in their inbox. </p>
+                            <p> You can also use 4xx and 5xx status codes for errors such as invalid parameters or internal <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=3a64388bbe76b2957e6be89844c315e6&camp=1789&creative=9325&node=11036071">server</a> issues (e.g., 500 Internal Server Error). </p>
+                            <h2 class="text-capitalize"> Proportion </h2>
+                            <p> The most critical aspect of API code is how easy it is to read and how difficult it is to make changes. API code should be easy to read and understand. If your code has
+                                too much logic, this can confuse developers who need to become more familiar with what's going on under the hood of your app. Conversely, suppose there's too little
+                                logic in an API function that would typically require some thought or understanding on the developer's behalf. In that case, they might not fully understand what
+                                they're doing when trying to implement that function into their app — and therefore end up breaking something else inadvertently as a result. The primary audience for
+                                your API is other developers who will be using it in their apps, so you want them to have a good idea of what your API does just by looking at it. </p>
+                            <p> The easiest way around these problems is simply keeping all business logic out of the actual <a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=taliferro2023-20&linkCode=ur2&linkId=3a64388bbe76b2957e6be89844c315e6&camp=1789&creative=9325&node=11036071">server</a> side implementation itself; instead put all business rules into
+                                separate classes/functions which can easily be tested separately from each other as well as being reused across different APIs without having any negative impact on
+                                functionality or performance due out there. </p>
+                            <h2 class="text-capitalize"> Don't get cute - stick with CRUD </h2>
+                            <p> When designing a new API, you should avoid getting cute. Don't try to be clever or innovative regarding the basic structure of your API. Start with CRUD (Create, Read,
+                                Update and Delete) as the basis for your API and stick with it. </p>
+                            <p> You might be tempted to create an interface that looks different than other APIs you've seen, something more relational or graph-like. It could be something that
+                                doesn't fit into any category of existing APIs. I can tell you from experience that this will only cause problems for everyone involved in building out your system. You
+                                are better off sticking with standard conventions until they become familiar enough that people don't need them explained anymore. </p>
+                            <p> Don't put verbs in your API name. </p>
+                            <p> Use nouns. </p>
+                            <p> Don't put unnecessary words in the URL pattern. Use resource restrictive URLs, meaning every level in the URL leads to a data element or collection. </p>
+                            <p> Leave out attributes that aren't needed for POST, PUT and PATCH operations. </p>
+                            <p> When designing your API, it's essential to leave out attributes that aren't needed for POST, PUT and PATCH operations. The only HTTP verbs that modify the resource are
+                                POST (create), PUT (update), and DELETE. </p>
+                            <p> It's good practice to use idempotent methods because when a request succeeds multiple times in a row, it doesn't change anything. This behavior is useful when dealing
+                                with lists because there isn't necessarily any order of operations, so if a user makes multiple attempts at adding an item within the same request, then we can assume
+                                that they don't care about doing so in any particular order. </p>
+                            <h2> Conclusion </h2>
+                            <p> These are just a few of the <a routerLink="/services/api-design">API design</a> best practices I've learned over the years. </p>
+                            <app-tyrone-showers-bio></app-tyrone-showers-bio>
+                            <div class="row wow fadeInUp">
+                                <div class="col"><a href="/blog/oct-2022/e-commerce-scalability-strategy" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+                                </div>
+                                <div class="col text-end"><a href="/blog/nov-2022/best-practices-for-network-systems" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <app-posts-history></app-posts-history>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================-->
+    <!--=     Call To Action Area Start     =-->
+    <!--=====================================-->
+    <!--=====================================-->
+    <!--=        Footer Area Start       	=-->
+    <!--=====================================-->
+    <app-footer-area></app-footer-area>
+    <!--=====================================-->
+    <!--=       Offcanvas Menu Area       	=-->
+    <!--=====================================-->
+    <app-off-canvas-menu></app-off-canvas-menu>
+</div>

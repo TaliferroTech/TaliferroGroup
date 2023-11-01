@@ -1,0 +1,25 @@
+<a href="#main-wrapper" aria-label="Back to Top" id="back-to-top" class="back-to-top">
+    <i class="fa fa-angle-double-up" title="Back to Top" style="font-weight: bolder;"></i>
+</a>
+<app-preloader></app-preloader>
+<app-modal-box></app-modal-box>
+<div id="main-wrapper" class="main-wrapper">
+    <app-header-area></app-header-area>
+    <app-banner-area videoSource="{{videoURL}}" posterSource="/assets/images/banner2.webp"></app-banner-area>
+    <app-faq></app-faq>
+    <app-packages></app-packages>
+    <app-design-process-area [header]="'Beyond Generic IT Consulting'" [subtitle]="'A New Way to Succeed'"
+        [description]="'Your vision, our mission. Let\'s redefine success together.'"
+        [title1]="'Transparent Consulting, Real Results'" [subtitle1]="'Your Path, Your Way'"
+        [description1]="'Success isn\'t one-size-fits-all. We customize the roadmap to fit you.'"
+        [image1]="'/assets/images/listening-valuing-delivering.webp'" [title2]="'Break the Mold'" [subtitle2]="'Strategic Empowerment'"
+        [description2]="'Your dreams, turned into plans, turned into wins.'"
+        [image2]="'/assets/images/breaking-free-from-the-race-to-the-bottom.webp'" [title3]="'Seize Your Potential, Ignite Success'" [subtitle3]="'Your Next Chapter Begins Here'"
+        [description3]="'Why aim for the sky when you could reach the stars? Connect with us. Let\'s go.'"
+        [image3]="'/assets/images/unlocking-your-true-potential.webp'" [title4]="'Your Vision, Our Mission'" [subtitle4]="'Forge Your Own Success'"
+        [description4]="'Dreams deserve reality. We\'re the catalyst you\'ve been waiting for.'"
+        [image4]="'/assets/images/discover-a-new-path-to-success.webp'"></app-design-process-area>
+    <app-counter-area></app-counter-area>
+    <app-blog-area></app-blog-area>
+    <app-footer-area></app-footer-area>
+</div>
