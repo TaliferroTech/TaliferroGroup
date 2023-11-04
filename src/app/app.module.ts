@@ -63,6 +63,7 @@ import { DataService } from './services/data.service';
       { path: 'blog/aug-2023', loadChildren: () => import('./august2023/august2023.module').then(m => m.August2023Module) },
       { path: 'blog/sep-2023', loadChildren: () => import('./sep2023/sep2023.module').then(m => m.Sep2023Module) },
       { path: 'blog/oct-2023', loadChildren: () => import('./oct2023/oct2023.module').then(m => m.Oct2023Module) },
+      { path: 'blog/nov-2023', loadChildren: () => import('./nov2023/nov2023.module').then(m => m.Nov2023Module) },
       { path: 'tyrone-showers', redirectTo: '/team/tyrone-showers', pathMatch: 'full' },
       { path: 'blog/dec-2022/the-makings-of-a-sound-lims', redirectTo: 'blog/jan-2023/the-makings-of-a-sound-lims', pathMatch: 'full' },
       { path: 'blog/dec-2022/i-only-want-to-lose-money-with-people-i-know', redirectTo: 'blog/jan-2023/i-only-want-to-lose-money-with-people-i-know', pathMatch: 'full' },

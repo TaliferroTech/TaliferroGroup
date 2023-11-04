@@ -23,7 +23,7 @@ import { Nov282022Component } from './nov282022/nov282022.component';
 import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
-    { path: '', component: ListComponent, data: { title: 'November Postings' } },
+    { path: '', component: ListComponent, data: { title: 'November 2022 Postings' } },
     { path: 'security-vulnerability-management-white-paper', component: Nov012022Component, data: { title: 'Security Vulnerability Management White Paper' } },
     { path: 'best-practices-for-network-systems', component: Nov022022Component, data: { title: 'Security Vulnerability Management White Paper' } },
     { path: 'modern-e-commerce-architecture', component: Nov032022Component, data: { title: 'Modern e-Commerce Architecture' } },
