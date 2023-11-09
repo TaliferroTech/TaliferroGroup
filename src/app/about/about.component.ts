@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.iVideo = Math.floor(Math.random() * 6);
+    this.iVideo = Math.floor(Math.random() * 7);
     if (this.iVideo === 1)
       this.videoURL = "assets/video/taliferro-it-connect-the-genesis-of-a-new-technological-landscape.mp4";
     else if (this.iVideo === 2)
@@ -29,6 +29,8 @@ export class AboutComponent implements OnInit {
       this.videoURL = "assets/video/roi-or-no-buy.mp4"
     else if (this.iVideo === 5)
       this.videoURL = "assets/video/efficienc-manifested-revenue-realized.mp4"
+    else if (this.iVideo ===6)
+      this.videoURL = "assets/video/the-ways-we-help-clients-increase-revenue.mp4"
 
   }
 
