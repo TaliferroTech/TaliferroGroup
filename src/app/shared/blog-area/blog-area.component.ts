@@ -7,15 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BlogAreaComponent implements OnInit {
 
-  @Input() blog1Link = "/blog/nov-2023/ai-driven-dynamic-pricing";
-  @Input() image1Link = "/assets/images/blog/ai-driven-dynamic-pricing.webp";
-  @Input() title1 = "AI-Driven Dynamic Pricing";
-  @Input() description1 = "The art of pricing cannot be overstated. It is a critical factor that not only influences consumer behavior but also defines the profitability and market positioning of a business. Dynamic pricing, powered by artificial intelligence (AI), has emerged as a sophisticated strategy that enables businesses to fine-tune their pricing models to align with market demands, consumer willingness to pay, and inventory levels. The deployment of AI in this realm is akin to finding the philosopher’s stone of pricing strategies, where the 'sweet spot' maximizes revenue and sustains customer loyalty.";
+  @Input() blog1Link = "/blog/nov-2023/a-comprehensive-guide-to-streamlining-power-app-development-with-hollywood-storyboarding";
+  @Input() image1Link = "/assets/images/blog/a-comprehensive-guide-to-streamlining-power-app-development-with-hollywood-storyboarding.webp";
+  @Input() title1 = "A Comprehensive Guide to Streamlining Power App Development with Hollywood Storyboarding";
+  @Input() description1 = "Efficiency and clarity in design and development processes are crucial. This article introduces an innovative approach to Power App development, leveraging the Hollywood methodology of storyboarding. This technique, commonly used in filmmaking, offers a visual and structured way to conceptualize app flow and functionality, greatly enhancing the development process.";
 
-  @Input() blog2Link = "/blog/nov-2023/digital-transformation-best-practices";
-  @Input() image2Link = "assets/images/blog/digital-transformation-best-practices.webp";
-  @Input() title2 = "Digital Transformation Best Practices";
-  @Input() description2 = "Digital transformation is no longer a buzzword; it's an operational imperative. Whether you're a seasoned enterprise or an emerging start-up, the journey toward digitization can be both exhilarating and challenging. To make the process more manageable and result-oriented, we've compiled a list of best practices that are fundamental for achieving unparalleled success in your digital transformation endeavors. These guidelines are curated to offer measurable benefits, so read on to boost your strategy.";
+  @Input() blog2Link = "/blog/nov-2023/pioneering-web-development-for-swift-and-accurate-digital-solutions";
+  @Input() image2Link = "assets/images/blog/pioneering-web-development-for-swift-and-accurate-digital-solutions.webp";
+  @Input() title2 = "Pioneering Web Development for Swift and Accurate Digital Solutions";
+  @Input() description2 = "Speed and accuracy are paramount. Taliferro Group, a distinguished IT firm in Seattle, has revolutionized the web development process through its unique methodology, termed the \"Taliferro Technique.\" This approach melds agility with precision, employing lesser-known yet highly effective techniques to ensure rapid throughput without compromising on quality. This article delves into the facets of this innovative methodology and how it sets Taliferro Group apart in the world of web development.";
 
   constructor() { }
 

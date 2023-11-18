@@ -1,4 +1,4 @@
-<a href="/blog/nov-2023/#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
+<a href="/blog/nov-2023/implementing-decentralized-api-management-with-apigee-edge-microgateway#main-wrapper" id="backto-top" aria-label="Back to Top" class="back-to-top">
     <i class="fa fa-angle-double-up"></i>
 </a>
 <!-- Preloader Start Here -->
@@ -6,7 +6,7 @@
 <!-- Preloader End Here -->
 <div id="main-wrapper" class="main-wrapper">
     <app-header-area-light></app-header-area-light>
-    <app-bread-crumb-light [title]="''"></app-bread-crumb-light>
+    <app-bread-crumb-light [title]="'Implementing Decentralized API Management with Apigee Edge Microgateway'"></app-bread-crumb-light>
     <section class="section-padding">
         <div class="container">
             <div class="row justify-content-center">
@@ -14,8 +14,8 @@
                     <div class="single-blog">
                         <div class="single-blog-content">
                             <div class="post-thumbnail">
-                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/.webp"
-                                    alt="Did You Know Most BI Tools Have a Feature for Automatic Data Cleansing?">
+                                <img class="rounded img-fluid wow fadeInUp" src="/assets/images/blog/implementing-decentralized-api-management-with-apigee-edge-microgateway.webp"
+                                    alt="Implementing Decentralized API Management with Apigee Edge Microgateway">
                             </div>
                             <div class="author">
                                 <div class="author-thumb">
@@ -28,13 +28,146 @@
                                     </ul>
                                 </div>
                             </div>
+                            <h2 class="text-capitalize wow fadeInUp"> Introduction </h2>
+                            <p class="wow fadeInUp"> Efficient API management is crucial for businesses. One innovative solution is the use of Apigee Edge Microgateway for decentralized API management, especially
+                                effective in high-latency scenarios. This article provides an in-depth guide on how to implement this strategy, addressing common problems and detailing the expected
+                                outcomes. </p>
+                            <h2 class="text-capitalize wow fadeInUp"> Problem Statement </h2>
+                            <p class="wow fadeInUp"> Businesses often face challenges with centralized API management, particularly in scenarios with high latency. These challenges include slower response times,
+                                bottlenecks in data processing, and increased vulnerability to single points of failure. </p>
+                            <h2 class="text-capitalize wow fadeInUp"> Solution Overview </h2>
+                            <p class="wow fadeInUp"> Apigee Edge Microgateway offers a decentralized approach to API management. This lightweight, scalable solution allows businesses to manage their APIs closer to the
+                                application, reducing latency, and improving response times while ensuring robust security and efficient data processing. </p>
+                            <h2 class="text-capitalize wow fadeInUp"> Step-by-Step Implementation Guide </h2>
+                            <ol>
+                                <li><strong>Preparation:</strong>  Ensure you have an Apigee Edge account and understand the basics of API proxy. </li>
+                                <li><strong>Installation of Apigee Edge Microgateway:</strong>  <ul>
+                                        <li> Download and install Node.js. </li>
+                                        <li> Install Apigee Edge Microgateway using npm (Node Package Manager). </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Configuration:</strong>  <ul>
+                                        <li> Configure the Microgateway with your Apigee Edge organization and environment information. <ol>
+                                                <li><strong>Editing the Configuration File:</strong>  <ul>
+                                                        <li> Locate the config/default.yaml file in your Microgateway installation directory. </li>
+                                                        <li> Edit the file to include your Apigee Edge organization and environment details. For example:
+<pre>
+    <code class="code-style">
+edgemicro:
+    org: your-org-name
+    env: your-env-name
+    key: your-key
+    secret: your-secret
+                                      
+    </code>
+</pre>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Setting API Proxies:</strong>  <ul>
+                                                        <li> Define the API proxies that the Microgateway will manage. Add the proxy details in the proxies section of the configuration file. For
+                                                            example:
+<pre>
+    <code class="code-style">
+proxies:
+- apiProxyName: example-api
+    revision: 1
+    base_path: /example      
+    </code>
+</pre>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Configuring Policies:</strong>  <ul>
+                                                        <li> Specify the policies you want to apply to each API proxy. This might include quota enforcement, spike arrest, or OAuth verification. </li>
+                                                        <li> For instance, to add a spike arrest policy:
+<pre>
+    <code class="code-style">
+policies:
+spikearrest:
+    timeUnit: minute
+    allow: 10
+    </code>
+</pre>
+                                                        </li>
+                                                        <li> This configuration means that the API will allow up to 10 requests per minute before enforcing spike arrest. </li>
+                                                    </ul>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li> Define your API proxies and policies as per your business requirements. </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Deployment:</strong>  <ul>
+                                        <li> Deploy the Microgateway in the desired environment, which can be on-premises or in the cloud. </li>
+                                        <li> Ensure it is positioned close to the backend services or data sources for optimal performance. </li>
+                                        <li> Starting the Microgateway: <ul>
+                                                <li> Once configured, start the Microgateway by running the following command in the terminal:
+<pre>
+    <code  class="code-style">
+edgemicro start
+    </code>
+</pre>
+                                                </li>
+                                                <li> This command initializes the Microgateway with the specified configuration. </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Deploying in a Specific Environment:</strong>  <ul>
+                                                <li> If deploying in a cloud environment (e.g., AWS, Azure), ensure that the Microgateway is installed on a virtual machine or container within that
+                                                    environment. </li>
+                                                <li> For on-premises deployment, install the Microgateway on a local server that has network access to your API services. </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Connecting to Backend Services:</strong>  <ul>
+                                                <li> Ensure that the Microgateway can communicate with the backend services. This might involve configuring network settings or modifying firewall
+                                                    rules. </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Testing the Deployment:</strong>  <ul>
+                                                <li> Test the Microgateway by making API requests through it. For example, using curl:
+<pre>
+    <code class="code-style">
+curl http://localhost:8000/example/apiEndpoint
+    </code>
+</pre>
+                                                </li>
+                                                <li> Replace http://localhost:8000 with your Microgateway's URL and /example/apiEndpoint with your API endpoint. </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Testing and Validation:</strong>  <ul>
+                                        <li> Perform thorough testing to ensure the APIs are functioning as expected. </li>
+                                        <li> Validate the response times and security features. </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Monitoring and Management:</strong>  <ul>
+                                    <li> Monitor the Microgateway's performance and log data. Apigee Edge provides built-in monitoring tools, or you can integrate third-party monitoring
+                                        solutions. </li>
 
+                                        <li> Use Apigee Edge's analytics features to monitor API traffic and performance. </li>
+                                        <li> Regularly update and manage your API proxies and policies through the Apigee Edge interface. </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h2 class="text-capitalize wow fadeInUp"> Expected Results and Benefits </h2>
+                            <p class="wow fadeInUp"> By implementing decentralized API management with Apigee Edge Microgateway, businesses can expect: </p>
+                            <ul>
+                                <li><strong>Reduced Latency:</strong>  Faster response times due to proximity to data sources. </li>
+                                <li><strong>Enhanced Performance:</strong>  Efficient processing and handling of API calls. </li>
+                                <li><strong>Robust Security:</strong>  Improved security features at the API level. </li>
+                                <li><strong>Scalability:</strong>  Ability to scale API management as per business growth. </li>
+                                <li><strong>Resilience:</strong>  Reduced risk of system failures due to decentralized architecture. </li>
+                            </ul>
+                            <h2 class="text-capitalize wow fadeInUp"> Conclusion </h2>
+                            <p class="wow fadeInUp"> Decentralized API management using Apigee Edge Microgateway is an effective strategy for businesses dealing with high-latency scenarios. This approach not only enhances
+                                performance but also ensures robust security and scalability. By following this step-by-step guide, businesses can successfully implement this solution and realize
+                                significant improvements in their API management capabilities. </p>
                             <app-tyrone-showers-bio></app-tyrone-showers-bio>
                             <div class="row wow fadeInUp">
-                                <div class="col"><a href="/blog/nov-2023/" aria-label="Previous"><i class="fa fa-chevron-left"
-                                            aria-hidden="true"></i> Previous</a>
+                                <div class="col"><a href="/blog/nov-2023/unveiling-the-challenges-companies-face-in-agile-adoption" aria-label="Previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
                                 </div>
-                                <div class="col text-end"><a href="/blog/nov-2023/" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                <div class="col text-end"><a href="/blog/nov-2023/leveraging-sentiment-analysis-to-navigate-market-volatility" aria-label="Next"> Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                     </a></div>
                             </div>
                         </div>

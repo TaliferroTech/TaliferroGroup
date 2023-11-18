@@ -1,0 +1,10 @@
+.code-style {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    border-radius: 5px;
+    display: block;
+    white-space: pre-wrap;
+  }
