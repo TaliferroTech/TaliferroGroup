@@ -7,15 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BlogAreaComponent implements OnInit {
 
-  @Input() blog1Link = "/blog/nov-2023/a-comprehensive-guide-to-streamlining-power-app-development-with-hollywood-storyboarding";
-  @Input() image1Link = "/assets/images/blog/a-comprehensive-guide-to-streamlining-power-app-development-with-hollywood-storyboarding.webp";
-  @Input() title1 = "A Comprehensive Guide to Streamlining Power App Development with Hollywood Storyboarding";
-  @Input() description1 = "Efficiency and clarity in design and development processes are crucial. This article introduces an innovative approach to Power App development, leveraging the Hollywood methodology of storyboarding. This technique, commonly used in filmmaking, offers a visual and structured way to conceptualize app flow and functionality, greatly enhancing the development process.";
+  @Input() blog1Link = "/blog/nov-2023/the-exclusive-benefits-of-our-limited-api-certification";
+  @Input() image1Link = "/assets/images/blog/the-exclusive-benefits-of-our-limited-api-certification.webp";
+  @Input() title1 = "The Exclusive Benefits of Our Limited API Certification";
+  @Input() description1 = "APIs are integral to business operations, ensuring they are secure, efficient, and developer-friendly is vital. Taliferro Group's proprietary API certification offers an exclusive opportunity to achieve this, with a distinct approach that sets it apart from typical consultancy-driven certifications. Having conducted certifications for major players like AT&T and T-Mobile, we understand the industry's nuances and the value of an unbiased, meticulous review process.";
 
-  @Input() blog2Link = "/blog/nov-2023/pioneering-web-development-for-swift-and-accurate-digital-solutions";
-  @Input() image2Link = "assets/images/blog/pioneering-web-development-for-swift-and-accurate-digital-solutions.webp";
-  @Input() title2 = "Pioneering Web Development for Swift and Accurate Digital Solutions";
-  @Input() description2 = "Speed and accuracy are paramount. Taliferro Group, a distinguished IT firm in Seattle, has revolutionized the web development process through its unique methodology, termed the \"Taliferro Technique.\" This approach melds agility with precision, employing lesser-known yet highly effective techniques to ensure rapid throughput without compromising on quality. This article delves into the facets of this innovative methodology and how it sets Taliferro Group apart in the world of web development.";
+  @Input() blog2Link = "/blog/nov-2023/the-imperative-of-cybersecurity-incident-and-governance-disclosure";
+  @Input() image2Link = "assets/images/blog/the-imperative-of-cybersecurity-incident-and-governance-disclosure.webp";
+  @Input() title2 = "The Imperative of Cybersecurity Incident and Governance Disclosure";
+  @Input() description2 = "The recent proposal by the U.S. Securities and Exchange Commission (SEC) requiring public companies to report material cybersecurity incidents within four business days is a significant step towards enhanced transparency and risk management. However, this focus on public companies brings up an important consideration: the arguably more critical need for similar practices in private companies, especially those operating in the business-to-consumer (B2C) space.";
 
   constructor() { }
 
