@@ -7,10 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BlogAreaComponent implements OnInit {
 
-  @Input() blog1Link = "/blog/nov-2023/the-exclusive-benefits-of-our-limited-api-certification";
-  @Input() image1Link = "/assets/images/blog/the-exclusive-benefits-of-our-limited-api-certification.webp";
-  @Input() title1 = "The Exclusive Benefits of Our Limited API Certification";
-  @Input() description1 = "APIs are integral to business operations, ensuring they are secure, efficient, and developer-friendly is vital. Taliferro Group's proprietary API certification offers an exclusive opportunity to achieve this, with a distinct approach that sets it apart from typical consultancy-driven certifications. Having conducted certifications for major players like AT&T and T-Mobile, we understand the industry's nuances and the value of an unbiased, meticulous review process.";
+  @Input() blog1Link = "/blog/nov-2023/exclusive-technology-partnerships-for-small-business-success";
+  @Input() image1Link = "/assets/images/blog/exclusive-technology-partnerships-for-small-business-success.webp";
+  @Input() title1 = "Exclusive Technology Partnerships for Small Business Success";
+  @Input() description1 = "Small businesses navigate a complex digital landscape marked by rapid changes and emerging challenges. At Taliferro Group, our commitment to addressing these challenges is rooted in a deep understanding of the unique needs of small businesses. Our services are not just solutions; they are partnerships for success, available to a select few to ensure unparalleled attention and quality.";
 
   @Input() blog2Link = "/blog/nov-2023/the-imperative-of-cybersecurity-incident-and-governance-disclosure";
   @Input() image2Link = "assets/images/blog/the-imperative-of-cybersecurity-incident-and-governance-disclosure.webp";

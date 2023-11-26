@@ -57,13 +57,13 @@ const routes: Routes = [
     { path: 'opinion-cybersecurity-incentives-in-the-utility-sector', component: Nov212023Component, data: { title: 'Opinion: Cybersecurity Incentives in the Utility Sector' } },
     { path: 'the-imperative-of-cybersecurity-incident-and-governance-disclosure', component: Nov222023Component, data: { title: 'The Imperative of Cybersecurity Incident and Governance Disclosure' } },
     { path: 'the-exclusive-benefits-of-our-limited-api-certification', component: Nov232023Component, data: { title: 'The Exclusive Benefits of Our Limited API Certification' } },
-    // { path: '', component: Nov242023Component, data: { title: '' } },
-    // { path: '', component: Nov252023Component, data: { title: '' } },
-    // { path: '', component: Nov262023Component, data: { title: '' } },
-    // { path: '', component: Nov272023Component, data: { title: '' } },
-    // { path: '', component: Nov282023Component, data: { title: '' } },
-    // { path: '', component: Nov292023Component, data: { title: '' } },
-    // { path: '', component: Nov302023Component, data: { title: '' } },
+    { path: 'how-i-used-ringcentral-and-chatgpt-for-meeting-management', component: Nov242023Component, data: { title: 'How I used RingCentral and ChatGPT For Meeting Management' } },
+    { path: 'the-imperative-of-independent-api-certification-for-enhanced-security', component: Nov252023Component, data: { title: 'The Imperative of Independent API Certification for Enhanced Security' } },
+    { path: 'elevate-your-api-security-with-taliferro-groups-unique-certification-process', component: Nov262023Component, data: { title: 'Elevate Your API Security with Taliferro Group’s Unique Certification Process' } },
+    { path: 'pioneering-solutions-for-seattles-emerging-tech-challenges', component: Nov272023Component, data: { title: 'Pioneering Solutions for Seattle\'s Emerging Tech Challenges' } },
+    { path: 'detroits-tech-landscape', component: Nov282023Component, data: { title: 'Detroit\'s Tech Landscape' } },
+    { path: 'empower-your-business-with-taliferro-groups-exclusive-tech-solutions', component: Nov292023Component, data: { title: 'Empower Your Business with Taliferro Group\'s Exclusive Tech Solutions' } },
+    { path: 'exclusive-technology-partnerships-for-small-business-success', component: Nov302023Component, data: { title: 'Exclusive Technology Partnerships for Small Business Success' } },
 ];
 
 @NgModule({
